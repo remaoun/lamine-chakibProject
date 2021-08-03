@@ -15,7 +15,7 @@ pipeline {
          steps{
            script{
              docker.withRegistry('https://registry.hub.docker.com','DockerHub'){
-               def customImage = docker.build("chabouchakour/application")
+               def customImage = docker.build(" remaoun/lamine-chakibProject")
                customImage.push()
              }
            }
