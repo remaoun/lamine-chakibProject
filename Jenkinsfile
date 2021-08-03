@@ -11,13 +11,13 @@ pipeline {
            echo 'Tests pas encore prets'
         }
       }
-      stage("Push"){
+      /*stage("Push"){
          steps{
            script{
              docker.withRegistry('https://registry.hub.docker.com','DockerHub'){
                def customImage = docker.build(" remaoun/lamine-chakibProject")
                customImage.push()
-             }
+             }*/
            }
         }
       }
