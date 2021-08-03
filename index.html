@@ -49,7 +49,7 @@
         const user = await response.json();
         console.log(JSON.stringify(user));
 
-        .getElementById('name').textContent = user.name ? user.name : 'Chakib Bouchakour';
+        document.getElementById('name').textContent = user.name ? user.name : 'Chakib Bouchakour';
         document.getElementById('email').textContent = user.email ? user.email : 'chabouchakour@gmail.com';
         document.getElementById('interests').textContent = user.interests ? user.interests : 'DevOps';
 
