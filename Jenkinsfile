@@ -8,7 +8,9 @@ pipeline {
       }
       stage("Test"){
          steps {
-           echo 'Tests pas encore prets'
+          sh '/home/lamine/Bureau/laminepr -n -t apptest.jmx -l results.jtl'
+          sh 'cat results.jtl'
+          perfReport 'results.jtl'
         }
       }
       stage("Push"){
