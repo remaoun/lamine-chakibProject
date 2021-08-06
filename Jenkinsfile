@@ -8,7 +8,7 @@ pipeline {
       }
       stage("Test"){
          steps {
-          sudo chown -R jenkins /home/lamine/jmeter
+       
           cd '/home/lamine/jmeter'
           sh '/home/lamine/jmeter -n -t plan-appTest.jmx -l results.jtl'
           sh 'cat results.jtl'
