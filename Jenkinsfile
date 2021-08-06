@@ -8,7 +8,7 @@ pipeline {
       }
       stage("Test"){
          steps {
-          sh '/usr/bin/jmeter/apache-jmeter-5.1.1/bin/jmeter -n -t apptest.jmx -l results.jtl'
+          sh '/home/lamine/apptest.jmx -l results.jtl'
           sh 'cat results.jtl'
           perfReport 'results.jtl'
         }
